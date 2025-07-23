@@ -1,6 +1,7 @@
 // import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { lazy, Suspense } from "react"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import Header from "./components/Header"
 import Loader from "./components/Loader"
 
 
@@ -37,6 +38,7 @@ const App = () => {
     <>
       <Router>
         {/* Headers */}
+        <Header />
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />
